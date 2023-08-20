@@ -10,6 +10,7 @@ body{
     overflow: hidden;
     position: relative;
     z-index: -5;
+    background-color: #b6d3fc;
 }
 header{
     position: relative;
@@ -19,10 +20,20 @@ header{
     padding-left: 1rem;
     padding-top: 1.5rem;
     font-size: 1.5rem;
+    justify-content: space-between;
 }
+/* .datas {
+    position: relative;
+    top: -1.5rem;
+    width: 15rem;
+    height: 10rem;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+} */
 .map_world{
     position: fixed;
     top: 2rem;
+    width: 100%;
 }
 .imgWorld{
     z-index: 10;
@@ -32,12 +43,12 @@ header{
 }
 .imgWorld path {
     stroke: black;
-    stroke-width: 1px;
+    stroke-width: 0.1px;
     fill: #ececec;
     transition: fill 0.2s;
 }
 .imgWorld path:hover{
-    stroke-width: 2px;
+    stroke-width: 1px;
     fill: #9e9999;
 }
 .tooltip{
@@ -92,13 +103,28 @@ header{
     z-index: 25;
     right: 1rem;
     top: 1rem;
-    width: 250px;
+    width: 20rem;
+    /* height: 10rem; */
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    border-radius: 1rem;
 }
 .frame-flag.is-closed, .titleCountry.is-closed{
     display: none;
 }
-.frame-flag img{
-    width: 100%;
+.frame-flag img {
+    position: absolute;
+    width: 15%;
+    margin: 0.5rem;
+}
+.frame-flag h3 {
+    text-align: center;
+    margin: 1rem 2rem 2rem 2rem;
+    font-size: 2rem;
+}
+.frame-flag p {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 .container{
     display: flex;
