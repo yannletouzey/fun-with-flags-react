@@ -1,0 +1,23 @@
+{
+  "name": "fun-with-flags",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "clear": "rm -rf dist && rm -rf .parcel-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yannletouzey/fun-with-flags-js.git"
+  },
+  "author": "Yann Letouzey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yannletouzey/fun-with-flags-js/issues"
+  },
+  "homepage": "https://github.com/yannletouzey/fun-with-flags-js#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
