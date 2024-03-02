@@ -1,0 +1,44 @@
+body {
+  background-color: rgb(169, 225, 249);
+}
+header {
+  width: 100%;
+}
+.map_world {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+}
+.imgWorld{
+  position: fixed;
+  z-index: 10;
+  top: -2rem;
+  right: 0;
+  width: 100%;
+  aspect-ratio: 16/7;
+}
+.imgWorld path {
+  stroke: black;
+  stroke-width: 1px;
+  fill: #ececec;
+  transition: fill 0.2s;
+}
+.imgWorld path:hover{
+  stroke-width: 2px;
+  fill: #9e9999;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 10;
+  width: 5rem;
+  overflow: hidden;
+}
+.tooltip img {
+  width: 100%;
+  height: 100%;
+}
+.tooltip.is-hidden {
+  display: none;
+}
