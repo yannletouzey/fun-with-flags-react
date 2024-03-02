@@ -39,18 +39,15 @@ function App() {
     <>
       <Header />
       <main className="main">
-        <Tooltip posMouse={posMouse} idForImg={idForImg} />
-        {/* {locationCurrent === '/' ? 
-          <>
-            <Tooltip posMouse={posMouse} idForImg={idForImg} />
-            <Map setIdForImg={setIdForImg} />
-          </>
-          :
-          <Country locationCurrent={locationCurrent} />
-        } */}
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Map setIdForImg={setIdForImg} />} />
+            <Route path="/" element={
+              <>
+                <Tooltip posMouse={posMouse} idForImg={idForImg} />
+                <Map setIdForImg={setIdForImg} />
+              </>
+            } 
+          />
             {countriesList.map((country, index) => (
               <Route key={index} path={`/${country.name}`} element={<Country />} />
             ))}
