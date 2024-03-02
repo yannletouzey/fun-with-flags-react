@@ -23,7 +23,7 @@ function App() {
   const [locationCurrent, setLocationCurrent] = useState(window.location.pathname)
 
   useEffect(() => {
-    console.log(window.location.href);
+    console.log(window.location);
     window.addEventListener("mousemove", handleMouseMove)
     return () => {
       window.removeEventListener("mousemove", handleMouseMove)
