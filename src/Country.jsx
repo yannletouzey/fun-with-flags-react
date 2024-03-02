@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import countries from "./countries"
 import Header from "./Header"
 
-const Country = ({ locationCurrent }) => {
+const Country = ({  }) => {
 
   const [dataCountry, setDataCountry] = useState({
     name: "",
@@ -19,7 +19,9 @@ const Country = ({ locationCurrent }) => {
 
   useEffect(() => {
     countries.map((country) => {
-      if (country.name === locationCurrent.replace("/", "")) {
+
+      if (country.name === window.location.pathname.replace("/", "")) {
+        console.log(country)
         setDataCountry({
           name: country.name,
           flag: country.img.toLocaleLowerCase(),

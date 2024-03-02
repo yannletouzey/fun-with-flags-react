@@ -4,8 +4,9 @@ import Tooltip from "./Tooltip"
 import { useEffect, useState, useRef } from "react"
 import Country from "./Country"
 import Header from "./Header"
-
+import countries from "./countries"
 function App() {
+  const [countriesList, setCountriesList] = useState(countries)
 
   const [idForImg, setIdForImg] = useState("")
 
@@ -23,11 +24,11 @@ function App() {
   const [locationCurrent, setLocationCurrent] = useState(window.location.pathname)
 
   useEffect(() => {
-    console.log(window.location);
     window.addEventListener("mousemove", handleMouseMove)
     return () => {
       window.removeEventListener("mousemove", handleMouseMove)
     }
+
   }, [])
 
   useEffect(() => {
@@ -38,14 +39,23 @@ function App() {
     <>
       <Header />
       <main className="main">
-        {locationCurrent === '/' ? 
+        <Tooltip posMouse={posMouse} idForImg={idForImg} />
+        {/* {locationCurrent === '/' ? 
           <>
             <Tooltip posMouse={posMouse} idForImg={idForImg} />
             <Map setIdForImg={setIdForImg} />
           </>
           :
           <Country locationCurrent={locationCurrent} />
-        }
+        } */}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Map setIdForImg={setIdForImg} />} />
+            {countriesList.map((country, index) => (
+              <Route key={index} path={`/${country.name}`} element={<Country />} />
+            ))}
+          </Routes>
+        </BrowserRouter>
       </main>
     </>
   )
