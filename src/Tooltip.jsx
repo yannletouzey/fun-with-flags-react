@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react"
 import countries from "./countries"
 
-const Tooltip = ({ posMouse, idForImg, ref }) => {
+const Tooltip = ({ posMouse, idForImg }) => {
 
   const [flag, setFlag] = useState(null)
 

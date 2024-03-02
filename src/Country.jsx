@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import countries from "./countries"
 import Header from "./Header"
+import HomeButton from "./HomeButton"
 
 const Country = () => {
 
@@ -31,7 +32,7 @@ const Country = () => {
   return (
     <>
       <h2>{dataCountry.name}</h2>
-      <a href="/">Home</a>
+      <HomeButton />
       <img src={dataCountry.flag} alt={dataCountry.name} />
     </>
   )

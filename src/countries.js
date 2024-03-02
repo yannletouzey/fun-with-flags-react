@@ -205,7 +205,7 @@ const countries = [
     img: "./assets/img/EC.svg"
   },
   {
-    name: "egypte",
+    name: "Egypte",
     code: "EG",
     img: "./assets/img/EG.svg"
   },
