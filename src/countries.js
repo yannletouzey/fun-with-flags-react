@@ -815,7 +815,7 @@ const countries = [
     img: "./assets/img/FR.svg"
   },
   {
-    name: "etats-Unis",
+    name: "Etats-Unis",
     code: "US",
     img: "./assets/img/US.svg"
   },
