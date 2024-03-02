@@ -436,7 +436,7 @@ const Map = ({ setIdForImg }) => {
         <Link to="/Qatar" id="QA" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M1270.1 343.7l-1.5 0.5-1.8-1.3-0.8-4.7 1.1-3.3 1.5-0.7 1.8 2 0.5 3.7-0.8 3.8z" name="Qatar"></path>
         </Link>
-        <Link to="/Romanie" id="RO" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
+        <Link to="/Roumanie" id="RO" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M1118.9 193.1l1.6 0.7 1.8 1.8 2 2.6 3.4 3.8 0.6 2.7-0.2 2.7 1.3 2.9 2.4 1.2 2.3-1.1 2.4 1.1 0.4 1.7-2.3 1.3-1.6-0.6-0.4 7.7-3.1-0.7-4-2.3-5.9 1.5-2.3 1.6-7.6-0.4-4-0.9-1.9 0.4-1.8-2.6-1-1.1 1-1.1-1.3-0.7-1.5 1.4-3.1-1.9-0.7-2.6-3.2-1.4-0.8-2.1-3-2.4 3.9-1.2 2.6-4.3 1.9-4.2 2.9-1.3 2-1.4 3.2 0.7 3.2 0 2.5 1.6 1.6-1 3.6-0.6 1-1.5 2.1 0z" name="Romania"></path>
         </Link>
         <Link to="/Rwanda" id="RW" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
@@ -709,7 +709,7 @@ const Map = ({ setIdForImg }) => {
         <Link to="/Guam" id="GU" className="Guam" name="Guam" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M1800.8 415.5l-0.1 0.4 0 0.6-0.1 0.3-0.3 0-0.2-0.3-0.1-0.5 0-0.5 0.6-0.5 0.1-0.2 0.1-0.5 0.2-0.1 0.1 0.2 0.4 0.1-0.2 0.5-0.5 0.5z"></path>
         </Link>
-        <Link to="/Saint-Kitts-et-Nevis" id="KN" className="saint-kitts-and-nevis" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
+        <Link to="/Saint-Kitts-et-Nevis" id="KN" className="saint-kitts-and-nevis Saint-Christophe-et-Niévès" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M 636.3 392 636 392 635.9 391.8 636.1 391.4 636.3 391.4 636.4 391.6 636.3 392 Z"></path>
           <path d="M 635.6 390.5 635.5 390.8 635.3 390.8 634.9 390.6 634.7 390.4 635 390 635.5 390.4 635.6 390.5 Z"></path>
         </Link>

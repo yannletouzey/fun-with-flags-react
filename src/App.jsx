@@ -23,9 +23,10 @@ function App() {
     })
   }
   const mainRef = useRef()
-  const [locationCurrent, setLocationCurrent] = useState(window.location.pathname)
+  const [locationCurrent, setLocationCurrent] = useState(null)
 
   useEffect(() => {
+    setLocationCurrent(window.location.pathname)
     setCountriesList(countries)
     mainRef.current.addEventListener("mousemove", handleMouseMove)
     return () => {
@@ -39,7 +40,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header locationCurrent={locationCurrent} />
       <main className="main" ref={mainRef}>
       <BrowserRouter>
         <Routes>
@@ -50,7 +51,7 @@ function App() {
             </>
           }/>
           {countriesList.map((country, index) => (
-            <Route key={index} path={`/${country.name}`} element={<Country />} />
+            <Route key={index} path={`/${country.slug}`} element={<Country locationCurrent={locationCurrent} setLocationCurrent={setLocationCurrent}/>} />
           ))}
         </Routes>
       </BrowserRouter>

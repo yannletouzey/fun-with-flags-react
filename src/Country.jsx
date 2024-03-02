@@ -1,40 +1,47 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 import countries from "./countries"
-import Header from "./Header"
-import HomeButton from "./HomeButton"
 
-const Country = () => {
+const Country = ({ locationCurrent, setLocationCurrent }) => {
+
+  useEffect(() => {
+    setLocationCurrent(window.location.pathname)
+  }, [locationCurrent])
 
   const [dataCountry, setDataCountry] = useState({
     name: "",
     flag: "",
-    region: "",
-    subregion: "",
+    code: "",
     capital: "",
-    population: "",
-    languages: "",
-    currencies: "",
-    borders: "",
   })
 
   useEffect(() => {
     countries.map((country) => {
-      if (country.name === window.location.pathname.replace("/", "")) {
+      if (country.slug === window.location.pathname.replace("/", "")) {
         setDataCountry({
           name: country.name,
           flag: country.img.toLocaleLowerCase(),
+          code: country.code,
+          capital: country.capital,
+          population: country.population,
         })
       }
     })
   }, [])
 
   return (
-    <>
+    <div className="country">
       <h2>{dataCountry.name}</h2>
-      <HomeButton />
-      <img src={dataCountry.flag} alt={dataCountry.name} />
-    </>
+      <div className="country_container">
+        <div className="country_left">
+          <p>Capital: <b>{dataCountry.capital}</b></p>
+          <p>Population: <b>{dataCountry.population}</b></p>
+        </div>
+        <div className="country_right">
+          <img src={dataCountry.flag} alt={dataCountry.name} />
+        </div>
+      </div>
+    </div>
   )
 }
 
