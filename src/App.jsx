@@ -5,7 +5,8 @@ import { useEffect, useState, useRef } from "react"
 import Country from "./Country"
 import Header from "./Header"
 import countries from "./countries"
-
+import MatchCountries from "./MatchCountries"
+import alpahbetList from "./alphabetList"
 function App() {
   const [countriesList, setCountriesList] = useState([])
 
@@ -50,9 +51,13 @@ function App() {
               <Map setIdForImg={setIdForImg} />
             </>
           }/>
+          <Route path="/a" element={<MatchCountries />} />
           {countriesList.map((country, index) => (
             <Route key={index} path={`/${country.slug}`} element={<Country locationCurrent={locationCurrent} setLocationCurrent={setLocationCurrent}/>} />
           ))}
+          {alpahbetList.map((letter) => {
+            return <Route key={letter} path={`/${letter}`} element={<MatchCountries letter={letter} />} />
+          })}
         </Routes>
       </BrowserRouter>
       </main>

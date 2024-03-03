@@ -25,7 +25,7 @@ const Tooltip = ({ posMouse, idForImg }) => {
     tooltipRef.current.classList.add("is-hidden")
   }
   useEffect(() => {
-    const link = document.querySelectorAll("a")
+    const link = document.querySelectorAll(".map_world a")
     link.forEach((link) => {
       link.addEventListener("mouseenter", handleEnter)
       link.addEventListener("mouseleave", handleLeave)

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const HomeButton = () => {
   return (
     <div className="container__linkHome">
