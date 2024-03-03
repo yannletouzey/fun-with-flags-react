@@ -42,7 +42,7 @@ const Map = ({ setIdForImg }) => {
         <Link to="/Autriche" id="AT" className="Austria" name="Austria" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M1070.6 190.8l-0.3 0.8 0.7 2.1-0.2 2.6-2.8 0 1.1 1.4-1.3 4-0.9 1.1-4.4 0.1-2.4 1.5-4.2-0.5-7.3-1.7-1.3-2.1-4.9 1.1-0.5 1.2-3.1-0.9-2.6-0.2-2.3-1.2 0.7-1.5-0.2-1.1 1.4-0.3 2.7 1.7 0.6-1.7 4.4 0.3 3.5-1.1 2.4 0.2 1.7 1.3 0.4-1.1-1-4.1 1.7-0.8 1.6-2.9 3.8 2.1 2.6-2.6 1.7-0.5 4 1.9 2.3-0.3 2.4 1.2z"></path>
         </Link>
-        <Link to="/Azerbaïdjan" id="AZ" className="Azerbaijan" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
+        <Link to="/Azerbaidjan" id="AZ" className="Azerbaijan" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M 1229 253.2 1225.2 252.3 1222 249.4 1220.8 246.9 1221.8 246.8 1223.7 248.5 1226 248.5 1226.2 249.5 1229 253.2 Z"></path>
           <path d="M 1235.3 236.2 1237.8 233.6 1241.3 236.9 1244.9 241.5 1247.4 241.8 1249.3 243.5 1245.1 244 1245.2 249 1244.8 251.2 1243.1 252.7 1243.9 255.8 1242.6 256.2 1238.7 252.8 1239.9 249.7 1238 247.8 1236.1 248.3 1230.8 253 1229.9 248.5 1227.4 247.5 1224.8 245.8 1225.9 243.7 1222.7 241.5 1223.4 239.9 1221.2 238.8 1219.8 237.2 1220.9 236.1 1225.1 238 1228 238.3 1228.6 237.6 1225.3 234.1 1226.5 233.3 1228 233.5 1232.3 237.3 1234.7 237.8 1235.3 236.2 Z"></path>
         </Link>
@@ -276,7 +276,7 @@ const Map = ({ setIdForImg }) => {
           <path d="M 1034.2 237.4 1037.5 241.9 1037.1 250.4 1034.7 250 1032.6 252.1 1030.6 250.4 1030.1 242.7 1028.8 239.1 1031.7 239.4 1034.2 237.4 Z"></path>
           <path d="M 1055.9 203.9 1055.5 207 1056.9 209.7 1052.8 208.7 1048.9 211 1049.3 214.1 1048.8 215.9 1050.7 219.1 1055.7 222.3 1058.6 227.6 1064.7 232.7 1068.7 232.6 1070.1 234 1068.7 235.3 1073.5 237.6 1077.5 239.5 1082.2 242.9 1082.8 244 1082 246.3 1078.9 243.3 1074.3 242.3 1072.4 246.4 1076.3 248.8 1075.9 252.1 1073.8 252.5 1071.3 258 1069.1 258.5 1069 256.5 1069.9 253.1 1071 251.7 1068.7 248 1066.9 244.8 1064.7 244 1062.9 241.3 1059.5 240.1 1057.1 237.5 1053.3 237.1 1049 234.3 1044.1 230.1 1040.4 226.5 1038.5 220.2 1035.9 219.5 1031.7 217.4 1029.4 218.2 1026.5 221.2 1024.4 221.6 1024.9 218.9 1022.1 218.1 1020.6 213.2 1022.3 211.3 1020.8 208.9 1020.9 207.1 1023.1 208.5 1025.6 208.2 1028.3 206 1029.2 207 1031.6 206.8 1032.6 204.3 1036.4 205.1 1038.5 204 1038.8 201.5 1041.9 202.4 1042.4 201.2 1047.3 200.1 1048.6 202.2 1055.9 203.9 Z"></path>
         </Link>
-        <Link to="/Jamaïque" id="JM" className="Jamaica" name="Jamaica" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
+        <Link to="/Jamaique" id="JM" className="Jamaica" name="Jamaica" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M556.5 387.1l-1.8 1.1-3-1.1-2.9-2.3 0.8-1.5 2.4-0.4 1.3 0.2 3.7 0.6 2.7 1.5 0.8 1.8-4 0.1z"></path>
         </Link>
         <Link to="/Jordanie" id="JO" className="Jordan" name="Jordan" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
@@ -302,7 +302,7 @@ const Map = ({ setIdForImg }) => {
         <Link to="/Coree_du_Sud" id="KR" className="Republic-of-Korea" name="Republic of Korea" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M1652.9 259.5l0-0.6 2.5 0.2 0.6-2.8 3.6-0.4 2-0.4 0-1.5 8.3 7.5 3.3 4.2 3.4 7.4-0.5 3.5-4.3 1.2-3.1 2.7-4.6 0.5-2.1-3.5-1.1-4.8-5.3-6.6 3.4-1.1-6.1-5.5z"></path>
         </Link>
-        <Link to="/Koweït" id="KW" className="Kuwait" name="Kuwait" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
+        <Link to="/Koweit" id="KW" className="Kuwait" name="Kuwait" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M1247.5 309.4l1.5 2.8-0.3 1.5 2.4 4.8-3.9 0.2-1.7-3.1-5-0.6 3.3-6.2 3.7 0.6z"></path>
         </Link>
         <Link to="/Laos" id="LA" name="Lao-PDR" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
@@ -613,7 +613,7 @@ const Map = ({ setIdForImg }) => {
           <path d="M 640.7 391.9 641.3 392.2 641.1 392.5 640.9 392.5 640.2 392.6 640 392.5 640 392 640.3 391.9 640.4 391.6 640.6 391.6 640.7 391.9 Z"></path>
           <path d="M 640.7 388.2 640.9 388.2 641.1 388.4 641.2 388.8 641.1 389.1 640.9 389.2 640.8 389 640.5 388.8 640.5 388.3 640.7 388.2 Z"></path>
         </Link>
-        <Link to="/Bahreïn" id="BH" className="Bahrain" name="Bahrain" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
+        <Link to="/Bahrein" id="BH" className="Bahrain" name="Bahrain" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M1264.1 333.3l0.3 0.1 0.2-0.1 0.4 0.7-0.1 0.2 0.1 0.9 0 0.7-0.2 0.4-0.1-0.4-0.6-0.8 0.1-0.4-0.2-0.7 0-0.4 0.1-0.2z"></path>
         </Link>
         <Link to="/Bahamas" id="BS" className="Bahamas" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
@@ -829,7 +829,7 @@ const Map = ({ setIdForImg }) => {
           <path d="M 1248.5 561.8 1248.3 561.9 1247.9 561.9 1247.9 561.7 1248.5 561.8 Z"></path>
           <path d="M 1300.4 531.5 1300.8 531.9 1300.6 532.2 1300.4 531.9 1300.1 531.7 1300.3 531.2 1300.4 531.5 Z"></path>
         </Link>
-        <Link to="/Iles_Turques-et-Caïques" id="TC" className="turks-and-caicos-islands" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
+        <Link to="/Iles_Turques-et-Caiques" id="TC" className="turks-and-caicos-islands" onMouseEnter={handleEnter} onDragLeave={handleLeave}>
           <path d="M 587.7 361.6 588.4 361.6 588.7 362 588.4 362 588.1 361.9 587.6 362 587.5 361.7 587.7 361.6 Z"></path>
           <path d="M 585 361.5 585.3 361.9 585.9 361.8 585.7 362 585.1 362 584.7 361.8 585 361.5 Z"></path>
           <path d="M 587.2 360.9 587.2 361.4 586.7 361.2 586.6 360.9 586.7 360.8 587.2 360.9 Z"></path>

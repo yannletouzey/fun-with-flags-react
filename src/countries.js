@@ -65,7 +65,7 @@ const countries = [
   },
   {
     name: "Azerbaïdjan",
-    slug: "Azerbaïdjan",
+    slug: "Azerbaidjan",
     code: "AZ",
     img: "./assets/img/AZ.svg",
     capital: "Bakou",
@@ -561,7 +561,7 @@ const countries = [
   },
   {
     name: "Jamaïque",
-    slug: "Jamaïque",
+    slug: "Jamaique",
     code: "JM",
     img: "./assets/img/JM.svg",
     capital: "Kingston",
@@ -625,7 +625,7 @@ const countries = [
   },
   {
     name: "Koweït",
-    slug: "Koweït",
+    slug: "Koweit",
     code: "KW",
     img: "./assets/img/KW.svg",
     capital: "Koweït",
@@ -1625,7 +1625,7 @@ const countries = [
   },
   {
     name: "Îles Turques-et-Caïques",
-    slug: "Iles_Turques-et-Caïques",
+    slug: "Iles_Turques-et-Caiques",
     code: "TC",
     img: "./assets/img/TC.svg",
     capital: "Cockburn Town",
