@@ -961,7 +961,7 @@ const countries = [
   },
   {
     name: "Sahara occidental",
-    slug: "Sahara_occcodeental",
+    slug: "Sahara_occidental",
     code: "EH",
     img: "./assets/img/EH.svg",
     capital: "Laayoune",
