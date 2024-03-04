@@ -1,14 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 import countries from "./countries"
-import { useLocation, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 const Country = () => {
-// const Country = ({ locationCurrent, setLocationCurrent }) => {
-
-  // useEffect(() => {
-  //   setLocationCurrent(window.location.pathname)
-  // }, [locationCurrent])
 
   const [dataCountry, setDataCountry] = useState(
     {

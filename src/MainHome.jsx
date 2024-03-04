@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom"
-import { useRef, useState, useEffect } from "react"
+import { useRef, useEffect } from "react"
 import Map from "./Map"
 import Tooltip from "./Tooltip"
 import Country from "./Country"
