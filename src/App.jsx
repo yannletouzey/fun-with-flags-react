@@ -51,9 +51,7 @@ function App() {
               <Map setIdForImg={setIdForImg} />
             </>
           }/>
-          {countriesList.map((country, index) => (
-            <Route key={index} path={`/${country.slug}`} element={<Country locationCurrent={locationCurrent} setLocationCurrent={setLocationCurrent}/>} />
-          ))}
+          <Route path={`/:countryParam`} element={<Country locationCurrent={locationCurrent} setLocationCurrent={setLocationCurrent}/>} />
           {/* {alpahbetList.map((letter) => {
             return <Route key={letter} path={`/${letter}`} element={<MatchCountries letter={letter} />} />
           })} */}
