@@ -20,11 +20,9 @@ const Country = () => {
   )
   
   const {countryParam} = useParams()
-
   useEffect(() => {
     countries.map((country) => {
       if (country.slug === countryParam) {
-        console.log(countryParam, country.slug);
         setDataCountry({
           name: country.name,
           flag: country.img.toLocaleLowerCase(),

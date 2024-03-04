@@ -4,12 +4,12 @@ import Tooltip from "./Tooltip"
 import { useEffect, useState, useRef } from "react"
 import Country from "./Country"
 import Header from "./Header"
-import countries from "./countries"
+// import countries from "./countries"
 import MatchCountries from "./MatchCountries"
 import alpahbetList from "./alphabetList"
 import MainHome from "./MainHome"
 function App() {
-  const [countriesList, setCountriesList] = useState([])
+  // const [countriesList, setCountriesList] = useState([])
 
   const [idForImg, setIdForImg] = useState("")
 
@@ -20,10 +20,10 @@ function App() {
 
   // const [locationCurrent, setLocationCurrent] = useState(null)
 
-  useEffect(() => {
-    // setLocationCurrent(window.location.pathname)
-    setCountriesList(countries)
-  }, [])
+  // useEffect(() => {
+  //   // setLocationCurrent(window.location.pathname)
+  //   setCountriesList(countries)
+  // }, [])
   
   // useEffect(() => {
     // setLocationCurrent(window.location.pathname)
@@ -37,8 +37,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<MainHome posMouse={posMouse} setPosMouse={setPosMouse} idForImg={idForImg} setIdForImg={setIdForImg} />} />
-          <Route path={`/:countryParam`} element={<Country />} />
-          {/* <Route path={`/:countryParam`} element={<Country locationCurrent={locationCurrent} setLocationCurrent={setLocationCurrent}/>} /> */}
+          <Route path="/:countryParam" element={<Country />} />
+          <Route path="/letter/:letterParam" element={<MatchCountries />} />
           {/* {alpahbetList.map((letter) => {
             return <Route key={letter} path={`/${letter}`} element={<MatchCountries letter={letter} />} />
           })} */}
