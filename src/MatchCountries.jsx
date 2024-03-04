@@ -16,7 +16,7 @@ const MatchCountries = () => {
       <ul className="containerLinkCountryLetter">
         {matchCountries.map((country, index) => {
           return (
-            <li className="linkCountry" style={{backgroundImage: `url(${country.img.toLowerCase()})`}} key={index}><span></span><Link to={`/${country.slug}`} key={index}><p>{country.name}</p></Link></li>
+            <li className="linkCountry" style={{backgroundImage: `url(${country.img.toLowerCase()})`}} key={index}><span></span><Link to={`/${country.slug}`} key={index}><img src={country.img.toLowerCase().replace("./", "/")} alt={country.name}/></Link></li>
           )
         })}
       </ul>
