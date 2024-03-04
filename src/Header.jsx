@@ -1,6 +1,10 @@
+import { useLocation } from "react-router-dom"
 import HomeButton from "./HomeButton"
 
-const Header = ({ locationCurrent }) => {
+const Header = () => {
+
+  const currentLocation = useLocation()
+// const Header = ({ locationCurrent }) => {
   // const [alphabet, setAlphabet] = useState([])
 
   // const handleClick = (letter) => {
@@ -10,7 +14,7 @@ const Header = ({ locationCurrent }) => {
   return (
     <header>
       <h1>Fun with flags</h1>
-      {locationCurrent !== "/" && <HomeButton />}
+      {currentLocation.pathname !== "/" && <HomeButton />}
       {/* {locationCurrent === "/" && 
        <ul className="listLetter">
         {alphabetList.map((letter) => {

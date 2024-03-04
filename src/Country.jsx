@@ -1,24 +1,30 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 import countries from "./countries"
-import { useParams } from "react-router-dom"
+import { useLocation, useParams } from "react-router-dom"
 
-const Country = ({ locationCurrent, setLocationCurrent }) => {
+const Country = () => {
+// const Country = ({ locationCurrent, setLocationCurrent }) => {
 
-  useEffect(() => {
-    setLocationCurrent(window.location.pathname)
-  }, [locationCurrent])
+  // useEffect(() => {
+  //   setLocationCurrent(window.location.pathname)
+  // }, [locationCurrent])
 
-  const [dataCountry, setDataCountry] = useState({
-    name: "",
-    flag: "",
-    code: "",
-    capital: "",
-  })
+  const [dataCountry, setDataCountry] = useState(
+    {
+      name: "",
+      flag: "",
+      code: "",
+      capital: "",
+    }
+  )
+  
   const {countryParam} = useParams()
+
   useEffect(() => {
     countries.map((country) => {
       if (country.slug === countryParam) {
+        console.log(countryParam, country.slug);
         setDataCountry({
           name: country.name,
           flag: country.img.toLocaleLowerCase(),

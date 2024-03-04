@@ -7,6 +7,7 @@ import Header from "./Header"
 import countries from "./countries"
 import MatchCountries from "./MatchCountries"
 import alpahbetList from "./alphabetList"
+import MainHome from "./MainHome"
 function App() {
   const [countriesList, setCountriesList] = useState([])
 
@@ -17,47 +18,32 @@ function App() {
     y: 0,
   })
 
-  const handleMouseMove = (e) => {
-    setPosMouse({
-      x: e.clientX,
-      y: e.clientY,
-    })
-  }
-  const mainRef = useRef()
-  const [locationCurrent, setLocationCurrent] = useState(null)
+  // const [locationCurrent, setLocationCurrent] = useState(null)
 
   useEffect(() => {
-    setLocationCurrent(window.location.pathname)
+    // setLocationCurrent(window.location.pathname)
     setCountriesList(countries)
-    mainRef.current.addEventListener("mousemove", handleMouseMove)
-    return () => {
-      mainRef.current.removeEventListener("mousemove", handleMouseMove)
-    }
   }, [])
   
-  useEffect(() => {
-    setLocationCurrent(window.location.pathname)
-  }, [locationCurrent])
+  // useEffect(() => {
+    // setLocationCurrent(window.location.pathname)
+  // }, [locationCurrent])
 
   return (
     <>
-      <Header locationCurrent={locationCurrent} />
-      <main className="main" ref={mainRef}>
+      {/* <Header locationCurrent={locationCurrent} /> */}
+      {/* <main className="main" ref={mainRef}> */}
       <BrowserRouter>
+        <Header />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Tooltip posMouse={posMouse} idForImg={idForImg} />
-              <Map setIdForImg={setIdForImg} />
-            </>
-          }/>
-          <Route path={`/:countryParam`} element={<Country locationCurrent={locationCurrent} setLocationCurrent={setLocationCurrent}/>} />
+          <Route path="/" element={<MainHome posMouse={posMouse} setPosMouse={setPosMouse} idForImg={idForImg} setIdForImg={setIdForImg} />} />
+          <Route path={`/:countryParam`} element={<Country />} />
+          {/* <Route path={`/:countryParam`} element={<Country locationCurrent={locationCurrent} setLocationCurrent={setLocationCurrent}/>} /> */}
           {/* {alpahbetList.map((letter) => {
             return <Route key={letter} path={`/${letter}`} element={<MatchCountries letter={letter} />} />
           })} */}
         </Routes>
       </BrowserRouter>
-      </main>
     </>
   )
 }
