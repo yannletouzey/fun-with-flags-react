@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import countries from "./countries"
 
 const Tooltip = ({ posMouse, idForImg }) => {
