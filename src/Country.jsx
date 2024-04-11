@@ -4,50 +4,9 @@ import countries from "./countries";
 import { useParams } from "react-router-dom";
 import { Canvas, useLoader, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-
+import vertexShader from './shaders/vertex.glsl'
+import fragmentShader from './shaders/fragment.glsl'
 const AnimatedMesh = ({ dataCountry }) => {
-  // Vertex Shader
-  const vertexShader = `
-    uniform vec2 uFrequency;
-    uniform float uTime;
-    
-    varying vec2 vUv;
-    varying float vElevation;
-    
-    void main() {
-      vec4 modelPosition = modelMatrix * vec4(position, 1.0);
-    
-      float elevation = sin(modelPosition.x * uFrequency.x + uTime) * 0.2;
-      elevation += sin(modelPosition.y * uFrequency.y + uTime) * 0.05;
-      modelPosition.z = elevation;
-      modelPosition.y *= 0.5;
-      
-      vec4 viewPosition = viewMatrix * modelPosition;
-      vec4 projectPosition = projectionMatrix * viewPosition;
-    
-      gl_Position = projectPosition;
-      vUv = uv;
-      vElevation = elevation;
-    }
-  `;
-
-  const fragmentShader = `
-    uniform vec3 uColor;
-    uniform sampler2D uTexture;
-
-    varying vec2 vUv;
-    varying float vElevation;
-
-    void main() {
-      vec4 textureColor = texture2D(uTexture, vUv);
-      textureColor.rgb += vElevation;
-      gl_FragColor = textureColor;
-    }
-    // void main() {
-    //   gl_FragColor = vec4(uColor, 1.0);
-    // }
-  `;
-
   const meshRef = useRef();
   const texture = useLoader(THREE.TextureLoader, dataCountry.flag || '');
   const [size, setSize] = useState({ width: 0, height: 0 });
