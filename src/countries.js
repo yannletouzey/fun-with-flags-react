@@ -498,8 +498,8 @@ const countries = [
   {
     name: "Indonésie",
     slug: "Indonesie",
-    code: "code",
-    img: "co./assets/img/de.svg",
+    code: "ID",
+    img: "./assets/img/id.svg",
     capital: "Jakarta",
     population: "273,523,615"
   },

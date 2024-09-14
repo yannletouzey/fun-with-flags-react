@@ -10,41 +10,31 @@ const AnimatedMesh = ({ dataCountry }) => {
   const meshRef = useRef();
   const texture = useLoader(THREE.TextureLoader, dataCountry.flag || '');
   const [size, setSize] = useState({ width: 0, height: 0 });
+  const [rFlag, setRFlag] = useState(6.5);
   useEffect(() => {
     if (texture) {
       setSize({
         width: texture.image.width,
         height: texture.image.height
       });
+      console.log(texture.source.data.naturalWidth, texture.source.data.naturalHeight, dataCountry);
+      
     }
+    console.log(texture.source.data.naturalHeight, texture.source.data.naturalWidth, (texture.source.data.naturalHeight / texture.source.data.naturalWidth) );
+    console.log(dataCountry);
+    
+    
   }, [texture]);
-  function calculerRatioSimplifie(width, height) {
-    const pgcd = (a, b) => b === 0 ? a : pgcd(b, a % b);
-    const diviseur = pgcd(width, height);
-    let ratio = {
-      width: width / diviseur,
-      height: height / diviseur
-    }
-    return ratio;
-  }
-  const [ratio, setRatio] = useState({ width: 0, height: 0 });
-  useEffect(() => {
-    const ratio = calculerRatioSimplifie(size.width, size.height);
-    setRatio({
-      width: ratio.width,
-      height: ratio.height
-    })
-  }, [size])
 
   useFrame(({ clock }) => {
     if (meshRef.current) {
-      meshRef.current.material.uniforms.uTime.value = clock.getElapsedTime();
+      // meshRef.current.material.uniforms.uTime.value = clock.getElapsedTime();
     }
   });
 
   return (
-    <mesh ref={meshRef}>
-      <planeGeometry args={[10, 10, 32, 32]} />
+    <mesh ref={meshRef} >
+      <planeGeometry args={[rFlag, (rFlag * (texture.source.data.naturalHeight / texture.source.data.naturalWidth) * 2), 32, 32]} />
       <shaderMaterial
         vertexShader={vertexShader}
         fragmentShader={fragmentShader}
@@ -57,7 +47,7 @@ const AnimatedMesh = ({ dataCountry }) => {
     </mesh>
   );
 };
-const Country = () => {
+const Country = ({ data}) => {
 
   const { countryParam } = useParams();
   const [dataCountry, setDataCountry] = useState({
@@ -70,6 +60,8 @@ const Country = () => {
 
   useEffect(() => {
     const country = countries.find(c => c.slug === countryParam);
+    console.log(country);
+    
     if (country) {
       setDataCountry({
         name: country.name,
@@ -91,7 +83,7 @@ const Country = () => {
           <p>Population: <b>{dataCountry.population}</b></p>
         </div>
         <div className="country_right">
-          <Canvas style={{ width: "100%", height: "100%" }}>
+          <Canvas style={{ width: "500px", height: "500px" }}>
             <AnimatedMesh dataCountry={dataCountry} />
           </Canvas>
         </div>
