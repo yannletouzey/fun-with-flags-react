@@ -28,7 +28,7 @@ const AnimatedMesh = ({ dataCountry }) => {
 
   useFrame(({ clock }) => {
     if (meshRef.current) {
-      // meshRef.current.material.uniforms.uTime.value = clock.getElapsedTime();
+      meshRef.current.material.uniforms.uTime.value = clock.getElapsedTime();
     }
   });
 
