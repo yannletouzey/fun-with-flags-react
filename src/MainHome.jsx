@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from "react"
 import Map from "./Map"
 import Tooltip from "./Tooltip"
 import Country from "./Country"
+
 export default function MainHome({ posMouse, setPosMouse, idForImg, setIdForImg }) {
   const currentLocation = useLocation()
   const mainRef = useRef()
@@ -13,9 +14,10 @@ export default function MainHome({ posMouse, setPosMouse, idForImg, setIdForImg 
     })
   }
 
-  useEffect(() => {
+  useEffect(() => {    
     mainRef.current.addEventListener("mousemove", handleMouseMove)
   }, [])
+
   return (
     <main className="main" ref={mainRef}>
       {currentLocation.pathname === "/" && 
